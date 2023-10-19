@@ -38,6 +38,13 @@ Student Ulysses has student_id = 101, we select the name and age.
 
 My solution:
 
+The logic is that we will use loc for selecting labels(rows or columns of data) to display data.
+Loc uses (rows,columns) format to display data.
+
+Here, we need to print data that matches for the student ID = 101 and print the data in columns -  name, age.
+
+Code - 
+
 import pandas as pd
 
 def selectData(students: pd.DataFrame) -> pd.DataFrame:
