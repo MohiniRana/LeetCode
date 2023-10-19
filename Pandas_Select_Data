@@ -1,0 +1,53 @@
+This is the third question of the Intorduction to Pandas Code
+
+Question:
+
+Description:
+DataFrame students
++-------------+--------+
+| Column Name | Type   |
++-------------+--------+
+| student_id  | int    |
+| name        | object |
+| age         | int    |
++-------------+--------+
+
+Write a solution to select the name and age of the student with student_id = 101.
+
+The result format is in the following example.
+
+Example 1:
+Input:
++------------+---------+-----+
+| student_id | name    | age |
++------------+---------+-----+
+| 101        | Ulysses | 13  |
+| 53         | William | 10  |
+| 128        | Henry   | 6   |
+| 3          | Henry   | 11  |
++------------+---------+-----+
+Output:
++---------+-----+
+| name    | age | 
++---------+-----+
+| Ulysses | 13  |
++---------+-----+
+Explanation:
+Student Ulysses has student_id = 101, we select the name and age.
+
+
+My solution:
+
+import pandas as pd
+
+def selectData(students: pd.DataFrame) -> pd.DataFrame:
+    return students.loc[students['student_id']==101, ["name","age"]]
+
+Day-to-Day Sample Code:
+
+import pandas as pd
+
+list_ = [[1,2], [2,3], [3,4], [4,5], [5,6]]
+columns_ = ["First", "Second"]
+df = pd.DataFrame(list_, columns = columns_)
+print(df.loc[df['First'] ==4, ["Second"]])
